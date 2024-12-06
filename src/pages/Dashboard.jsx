@@ -19,7 +19,7 @@ const HeroBox = styled(Box)({
   position: 'relative',
 });
 
-const LandingPage = () => {
+const Dashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = (theme) => {
@@ -44,4 +44,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default Dashboard;

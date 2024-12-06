@@ -56,6 +56,11 @@ const SignUp = () => {
     setSidebarOpen(prevState => !prevState);
   };
 
+  const handleSubmit = () => {
+    let validateErrors = { first: '', last: '', email: '', password: '', password2: '' };
+    
+  }
+
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header onToggleSidebar={toggleSidebar} />
@@ -126,7 +131,10 @@ const SignUp = () => {
               value={password2}
             />
             {error.password2 && <Typography color="error" sx={{ mt: '0', mb: '0' }}>{error.password2}</Typography>}
-            <Button color="info" size="medium" sx={{ mb: 2, ml: 2, backgroundColor: '#1976d2', color: 'white', '&:hover': { backgroundColor: '#1565c0', }, }}>
+            <Button color="info" size="medium"
+              sx={{ mb: 2, ml: 2, backgroundColor: '#1976d2', color: 'white', '&:hover': { backgroundColor: '#1565c0', }, }}
+              onClick={handleSubmit}
+            >
               Submit
             </Button>
           </Box>
