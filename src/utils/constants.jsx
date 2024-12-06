@@ -62,10 +62,4 @@ export const fruits = [
     name: 'Fresh Grape',
     src: 'https://static.vecteezy.com/system/resources/previews/027/716/386/non_2x/fresh-grape-in-water-splash-on-white-backround-juicy-fruit-generative-ai-photo.jpg'
   },
-  // {
-  //   id: 9,
-  //   price: 3.18,
-  //   name: 'Sweet Pears',
-  //   src: 'https://static.vecteezy.com/system/resources/previews/015/606/623/non_2x/sweet-pears-fruits-photo.jpg'
-  // }
 ]

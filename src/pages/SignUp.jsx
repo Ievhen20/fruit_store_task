@@ -39,6 +39,18 @@ const HeroBox = styled(Box)(({ theme }) => ({
 
 const SignUp = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [first, setFirst ] = useState('');
+  const [last, setLast] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [password2, setPassword2] = useState('');
+  const [error, setError] = useState({
+    first: '',
+    last: '',
+    email: '',
+    password: '',
+    password2: '',
+  })
 
   const toggleSidebar = () => {
     setSidebarOpen(prevState => !prevState);
@@ -69,21 +81,29 @@ const SignUp = () => {
               fullWidth
               InputLabelProps={{ shrink: true }}
               sx={textFieldStyles}
+              onChange={(e)=>setFirst(e.target.value)}
+              value={first}
             />
+            {error.first && <Typography color="error" sx={{ mt: '0', mb: '0' }}>{error.first}</Typography>}
             <TextField
               label="Last Name"
               variant="outlined"
               fullWidth
               InputLabelProps={{ shrink: true }}
               sx={textFieldStyles}
+              value={last}
             />
+            {error.last && <Typography color="error" sx={{ mt: '0', mb: '0' }}>{error.last}</Typography>}
             <TextField
               label="Email"
               variant="outlined"
               fullWidth
               InputLabelProps={{ shrink: true }}
               sx={textFieldStyles}
+              onChange={(e)=>setLast(e.target.value)}
+              value={email}
             />
+            {error.email && <Typography color="error" sx={{ mt: '0', mb: '0' }}>{error.email}</Typography>}
             <TextField
               label="Password"
               variant="outlined"
@@ -91,7 +111,10 @@ const SignUp = () => {
               type="password"
               InputLabelProps={{ shrink: true }}
               sx={textFieldStyles}
+              onChange={(e)=>setFirst(e.target.value)}
+              value={password}
             />
+            {error.password && <Typography color="error" sx={{ mt: '0', mb: '0' }}>{error.password}</Typography>}
             <TextField
               label="Confirm Password"
               variant="outlined"
@@ -99,7 +122,10 @@ const SignUp = () => {
               type="password"
               InputLabelProps={{ shrink: true }}
               sx={textFieldStyles}
+              onChange={(e)=>setFirst(e.target.value)}
+              value={password2}
             />
+            {error.password2 && <Typography color="error" sx={{ mt: '0', mb: '0' }}>{error.password2}</Typography>}
             <Button color="info" size="medium" sx={{ mb: 2, ml: 2, backgroundColor: '#1976d2', color: 'white', '&:hover': { backgroundColor: '#1565c0', }, }}>
               Submit
             </Button>
