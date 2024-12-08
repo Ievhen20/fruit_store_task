@@ -63,3 +63,18 @@ export const fruits = [
     src: 'https://static.vecteezy.com/system/resources/previews/027/716/386/non_2x/fresh-grape-in-water-splash-on-white-backround-juicy-fruit-generative-ai-photo.jpg'
   },
 ]
+
+export const customerReviews = [
+  {
+    id: 1,
+    review: 5,
+    customerId: 5,
+    avatar: 'https://miro.medium.com/v2/resize:fill:88:88/1*-XR2314C9VKdi16g-sVdKg.jpeg'
+  },
+  {
+    id: 2,
+    review: 4.3,
+    customerId: 28,
+    avatar: 'https://miro.medium.com/v2/resize:fill:88:88/1*F81J3uEeXCjvuYRv3OnreA.jpeg'
+  }
+]
